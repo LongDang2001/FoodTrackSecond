@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoodTrackerSecond" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mtz-DF-tmA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="530"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jED-8C-PqM">
+                                        <rect key="frame" x="0.0" y="0.0" width="86.5" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="lLO-lR-z3P"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Miss Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cqN-Fk-yfb">
+                                        <rect key="frame" x="0.0" y="58" width="414" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="wzf-DN-RBW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NameOK!" translatesAutoresizingMaskIntoConstraints="NO" id="5QD-aG-ZKg">
+                                        <rect key="frame" x="0.0" y="116" width="414" height="414"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="5QD-aG-ZKg" secondAttribute="height" multiplier="1:1" id="ccR-c8-INM"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="gZG-w3-2Kz" appends="YES" id="EuW-R8-DCR"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="5QD-aG-ZKg" firstAttribute="top" secondItem="cqN-Fk-yfb" secondAttribute="bottom" constant="8" id="6OT-nz-1jh"/>
+                                    <constraint firstItem="jED-8C-PqM" firstAttribute="leading" secondItem="mtz-DF-tmA" secondAttribute="leading" id="BdJ-aJ-oeA"/>
+                                    <constraint firstAttribute="trailing" secondItem="cqN-Fk-yfb" secondAttribute="trailing" id="Izv-YX-cK0"/>
+                                    <constraint firstItem="5QD-aG-ZKg" firstAttribute="width" secondItem="mtz-DF-tmA" secondAttribute="width" id="cjQ-C1-PyK"/>
+                                    <constraint firstItem="5QD-aG-ZKg" firstAttribute="leading" secondItem="mtz-DF-tmA" secondAttribute="leading" id="pJ2-QP-X9v"/>
+                                    <constraint firstItem="jED-8C-PqM" firstAttribute="top" secondItem="mtz-DF-tmA" secondAttribute="top" id="rPa-ic-lY3"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mtz-DF-tmA" secondAttribute="trailing" id="4aa-iJ-dpa"/>
+                            <constraint firstItem="mtz-DF-tmA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xdU-w8-0dB"/>
+                            <constraint firstItem="mtz-DF-tmA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="y6D-Wa-UIa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mealNameLabel" destination="jED-8C-PqM" id="SVg-lK-Qi6"/>
+                        <outlet property="nameTextField" destination="cqN-Fk-yfb" id="Dtk-f1-7fn"/>
+                        <outlet property="photoImageView" destination="5QD-aG-ZKg" id="Gto-zY-vmt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gZG-w3-2Kz">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="U5Q-pr-Bhi"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NameOK!" width="360" height="480"/>
+    </resources>
+</document>
